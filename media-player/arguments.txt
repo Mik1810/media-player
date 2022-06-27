@@ -1,0 +1,3 @@
+--module-path "(Specificare il percorso della cartella lib delle librerie di javafx, rimuovere le parentesi tonde)" --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media
+
+Esempio: --module-path "C:\java\javafx-sdk-18.0.1\lib" --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media

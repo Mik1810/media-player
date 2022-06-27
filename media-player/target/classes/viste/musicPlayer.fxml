@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="1280.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MusicPlayerController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="84.0" prefWidth="1280.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="songImageView" fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@playButtonIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="57.0" prefWidth="1066.0">
+                     <children>
+                        <Label fx:id="songLabel" text="Label" textFill="#fff8f0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="songArtistLabel" text="Label" textFill="#fff8f0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fx:id="previousButton" fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@previousSongIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="playButton" fitHeight="36.0" fitWidth="49.0" onMouseClicked="#playButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@playButtonIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="nextButton" fitHeight="30.0" fitWidth="31.0" onMouseClicked="#playButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@nextSongIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets top="-40.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="testButton" mnemonicParsing="false" onAction="#playButtonAction" text="Button" />
+                  <Slider fx:id="volumeSlider" prefHeight="5.0" prefWidth="140.0" value="50.0">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </Slider>
+               </children>
+               <VBox.margin>
+                  <Insets right="10.0" top="-50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0">
+               <children>
+                  <ProgressBar fx:id="songProgressBar" prefHeight="11.0" prefWidth="717.0" progress="0.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

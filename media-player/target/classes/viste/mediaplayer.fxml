@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.univaq.disim.oop.myunivaq.controller.MusicPlayerController">
+   <left>
+      <VBox prefHeight="214.0" prefWidth="158.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="songImage" fitHeight="137.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="8.0" top="55.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@71BJZeoQYZL._AC_SY450_.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="songTitleLabel" prefHeight="18.0" prefWidth="151.0" text="Fenomeno - Fabri Fibra">
+               <VBox.margin>
+                  <Insets left="13.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="214.0" prefWidth="454.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ProgressBar fx:id="songProgressBar" prefHeight="16.0" prefWidth="410.0" progress="0.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" top="70.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="previousSongImage" fitHeight="70.0" fitWidth="70.0" onMouseClicked="#previousSong" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@canzone_indietro.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="70.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="playSongImage" fitHeight="70.0" fitWidth="70.0" onMouseClicked="#playSong" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@play.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="nextSongImage" fitHeight="70.0" fitWidth="70.0" onMouseClicked="#nextSong" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@canzone_avanti.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="74.0" fitWidth="70.0" onMouseClicked="#cancelTimer" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@pause.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
